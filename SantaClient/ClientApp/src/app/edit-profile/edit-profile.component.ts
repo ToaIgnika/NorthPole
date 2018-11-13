@@ -88,7 +88,7 @@ export class EditProfileComponent implements OnInit {
         "Authorization": "Bearer " + this.auth.token
       }
     };
-    this.http.put(this.API + '/c/' + this.auth.id, data, config)
+    this.http.put(this.API + '/c/' + this.auth.uid, data, config)
       .subscribe(
         (res) => {
           console.log('information updated.');

@@ -150,7 +150,7 @@ namespace SantaAPI.Controllers
             }
 
             child.Street = model.Street;
-            child.City = model.Street;
+            child.City = model.City;
             child.Province = model.Province;
             child.PostalCode = model.PostalCode;
             child.Country = model.Country;
@@ -184,7 +184,7 @@ namespace SantaAPI.Controllers
             child.LastName = model.LastName;
             child.BirthDate = DateTime.Parse(model.BirthDate);
             child.Street = model.Street;
-            child.City = model.Street;
+            child.City = model.City;
             child.Province = model.Province;
             child.PostalCode = model.PostalCode;
             child.Country = model.Country;
