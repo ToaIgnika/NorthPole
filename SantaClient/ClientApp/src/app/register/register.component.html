@@ -1,0 +1,56 @@
+<app-nav-menu></app-nav-menu>
+
+<div class="container" style="z-index:10000">
+  <div class="form-group">
+    <label for="email">Username:</label>
+    <input type="text" class="form-control" id="email" [(ngModel)]="user.email">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd" [(ngModel)]="user.password">
+  </div>
+  <div class="form-group">
+    <label for="fname">First Name:</label>
+    <input type="text" class="form-control" id="fname" [(ngModel)]="user.fname">
+  </div>
+  <div class="form-group">
+    <label for="lname">Last Name:</label>
+    <input type="text" class="form-control" id="lname" [(ngModel)]="user.lname">
+  </div>
+  <div class="form-group">
+    <label for="bdate">Birthday:</label>
+    <input type="date" class="form-control" id="bdate" [(ngModel)]="user.bd">
+  </div>
+  <div class="form-group">
+    <label for="street">Street:</label>
+    <input type="text" class="form-control" id="street" [(ngModel)]="user.street">
+  </div>
+  <div class="form-group">
+    <label for="city">City:</label>
+    <input type="text" class="form-control" id="city" [(ngModel)]="user.city">
+  </div>
+  <div class="form-group">
+    <label for="province">Province:</label>
+    <input type="text" class="form-control" id="province" [(ngModel)]="user.province">
+  </div>
+  <div class="form-group">
+    <label for="postal">Postal Code:</label>
+    <input type="text" class="form-control" id="postal" [(ngModel)]="user.postal">
+  </div>
+  <div class="form-group">
+    <label for="country">Country:</label>
+    <input type="text" class="form-control" id="country" [(ngModel)]="user.country">
+  </div>
+  <div class="form-group">
+    <label for="lat">Latitude:</label>
+    <input type="number" class="form-control" id="lat" [(ngModel)]="user.lat">
+  </div>
+  <div class="form-group">
+    <label for="lon">Longitude:</label>
+    <input type="number" class="form-control" id="lon" [(ngModel)]="user.lon">
+  </div>
+  <button (click)="registerUser()" class="btn btn-success btn-block">Register</button>
+</div>
+<br />
+<br />
+
