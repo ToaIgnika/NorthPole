@@ -91,7 +91,7 @@ export class EditChildComponent implements OnInit {
           this.user.email = this.data.userName;
           this.user.fname = this.data.firstName;
           this.user.lname = this.data.lastName;
-          this.user.bd = this.data.birthDate;
+          this.user.bd = this.data.birthDate.substring(0, 10);
           this.user.street = this.data.street;
           this.user.city = this.data.city;
           this.user.province = this.data.province;

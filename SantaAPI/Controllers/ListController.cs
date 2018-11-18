@@ -18,6 +18,8 @@ using Newtonsoft.Json;
 using SantaAPI.Data;
 using SantaAPI.Models;
 using SantaAPI.ViewModels;
+using System.Globalization;
+
 
 namespace SantaAPI.Controllers
 {
@@ -29,7 +31,6 @@ namespace SantaAPI.Controllers
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ApplicationDbContext _context;
         private readonly IConfiguration _configuration;
-        private readonly string DEFAULT_ROLE = "Child";
 
         private Child makeCopy(ApplicationUser childU)
         {
@@ -38,6 +39,7 @@ namespace SantaAPI.Controllers
             child.UserName = childU.UserName;
             child.FirstName = childU.FirstName;
             child.LastName = childU.LastName;
+            child.BirthDate = childU.BirthDate;
             child.Street = childU.Street;
             child.City = childU.Street;
             child.Province = childU.Province;
@@ -182,7 +184,12 @@ namespace SantaAPI.Controllers
 
             child.FirstName = model.FirstName;
             child.LastName = model.LastName;
-            child.BirthDate = DateTime.Parse(model.BirthDate);
+            Console.WriteLine("THIS: " + model.BirthDate);
+            child.BirthDate = DateTime.ParseExact(model.BirthDate, "yyyy-MM-dd",
+                                        null);
+            Console.WriteLine("THIS: " + child.BirthDate);
+
+
             child.Street = model.Street;
             child.City = model.City;
             child.Province = model.Province;
