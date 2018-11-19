@@ -67,12 +67,9 @@ export class EditChildComponent implements OnInit {
       (res) => {
         console.log('information updated.');
         this.router.navigate(['./kids/' + this.id]);
-        window.location.reload();
-          //this.registerSuccess = true;
         },
         err => {
           console.log(err);
-          //finish loading
         }
       );
   }
