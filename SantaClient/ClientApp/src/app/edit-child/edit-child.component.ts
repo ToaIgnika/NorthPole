@@ -26,7 +26,8 @@ export class EditChildComponent implements OnInit {
     country: "",
     lat: "",
     lon: "",
-    isNaughty: false
+    isNaughty: false,
+    dc: ""
   }
 
   private data: any;
@@ -103,6 +104,7 @@ export class EditChildComponent implements OnInit {
           //this.router.navigate(['./dashboard']);
           //this.registerSuccess = true;
           this.map(this.user.lat, this.user.lon);
+          this.user.dc = this.data.dateCreated;
         },
         err => {
           console.log(err);

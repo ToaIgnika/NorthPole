@@ -92,12 +92,13 @@ export class EditProfileComponent implements OnInit {
       .subscribe(
         (res) => {
           console.log('information updated.');
-          window.location.reload();
+          this.router.navigate(['/profile']);
+          //window.location.reload();
           //this.registerSuccess = true;
         },
         err => {
           console.log(err);
-          //finish loading
+          alert("something went wrong. please try again.");
         }
       );
   }

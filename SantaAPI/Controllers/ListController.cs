@@ -48,6 +48,7 @@ namespace SantaAPI.Controllers
             child.Latitude = childU.Latitude;
             child.Longitude = childU.Longitude;
             child.isNaughty = childU.isNaughty;
+            child.DateCreated = childU.DateCreated;
             return child;
         }
 

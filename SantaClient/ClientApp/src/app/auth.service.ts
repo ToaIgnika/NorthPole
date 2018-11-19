@@ -18,12 +18,7 @@ export class AuthService {
 
   constructor(private http: HttpClient,
     private router: Router) {
-    if (localStorage.getItem('token') != null) {
-      this.token = localStorage.getItem('token');
-      this.role = jwt_decode(this.token)[this.roleId];
-      this.user = true;
-      this.uid = localStorage.getItem('uid');
-    }
+    
   }
 
   login(email: string, password: string): Promise<void> {

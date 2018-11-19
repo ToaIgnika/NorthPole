@@ -1,0 +1,8 @@
+add-migration "hello world"
+update-database
+
+add-migration "user_manager"
+update-database
+
+add-migration "datecreated"
+update-database

@@ -35,7 +35,7 @@ namespace SantaAPI
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<ApplicationDbContext>(
-               options => options.UseSqlite("Data Source=santa.db"));
+               options => options.UseSqlite("Data Source=santa.sqlite"));
 
             // Add Cors
             services.AddCors(o => o.AddPolicy("AllAccessCors", builder =>
